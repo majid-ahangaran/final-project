@@ -1,83 +1,2045 @@
+@font-face {
+    font-family: "poppins";
+    src: url('./font/Poppins/Poppins-Regular.ttf') format('truetype');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: "poppins", arial, sans-serif;
 }
+
+:root {
+    --blue-color: rgb(0, 0, 85);
+    --black-color: black;
+    --gray-color: gray;
+    --white-color: white;
+    --orang-color: orange;
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: white;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: white;
+    opacity: 1;
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: white;
+}
+
+a {
+    color: white;
+    display: inline-block;
+}
+
+.littlefont {
+    font-size: 12px;
+}
+
+.icon-font {
+    font-size: 25px;
+}
+
+.block {
+    display: block;
+}
+
+.gray {
+    color: gray;
+}
+
+.orange {
+    color: orange;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black
+}
+
+/*  Header style */
 
 header {
     margin: 0 auto;
     max-width: 1100px;
     height: 150px;
-    background-color: blue;
 }
 
 .topheader {
-    height: 90px;
-    display: flex;
+    height: 60%;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    background-color: blanchedalmond;
+    background-color: var(--white-color);
     padding: 0 10px;
+    text-align: left;
 
+}
+
+
+.topheader h1 {
+    line-height: 35px;
+    font-size: 38px;
+    font-weight: 700;
+
+}
+
+.topheader .flex {
+    gap: 10px;
+
+}
+
+.topheader .flex span h6 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.topheader .flex span p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.topheader p {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    font-weight: 900;
+}
+
+.topheader div:last-child {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .applybottom {
     padding: 10px 15px;
-    background-color: orange;
+    background-color: var(--orang-color);
+    color: var(--white-color);
+    border-style: solid;
+    border-width: 1px;
+
 }
-.applybottom:hover{
-    background-color: white;
+
+.applybottom:hover {
+    background-color: var(--white-color);
+    color: var(--orang-color);
+    border-style: solid;
+    border-color: var(--orang-color);
 }
 
 .downheader {
-    height: 60px;
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(124, 100, 63);
-    padding: 0 20px;
+    background-color: rgb(0, 0, 41);
+    padding-left: 5px;
+    color: var(--white-color);
 
 }
 
 .downheader ul {
     display: flex;
-    gap: 10px;
+    gap: 40px;
+}
+
+.form-search {
+    color: var(--white-color);
+    padding: 10px 20px 10px 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(216, 220, 246, 0.282);
+    background-color: transparent;
+    border-radius: 20px;
+}
+
+.Search-icon {
+    border-style: none;
+    background-color: transparent;
+    color: var(--white-color);
+    cursor: pointer;
+    transform: translate(-30px, 2px);
 }
 
 nav {
     width: 100%;
-    height: 65vh;
-    background:linear-gradient(rgba(209, 104, 18, 0.473), rgba(199, 85, 19, 0.438)), url("/image/bg_1.jpg");
-    background-repeat: no-repeat;
-    background-position: top center;
+    height: 100vh;
+    background: linear-gradient(rgba(209, 104, 18, 0.384), rgba(199, 85, 19, 0.384)), url("./image/bg_1.jpg") no-repeat center center / cover;
+
 }
 
 .underheaderimage {
     margin: 0 auto;
     max-width: 1100px;
-    height: 65vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    
+
 }
-.underheaderimage h1{
+
+.underheaderimage h1 {
     font-size: 50px;
-    max-width: 400px;
-    color: white;
+    max-width: 500px;
+    color: var(--white-color);
 }
-.underheaderimage p{
-font-size: 18px ;
-max-width: 450px;
-color: white;
+
+.underheaderimage p {
+    font-size: 18px;
+    max-width: 450px;
+    color: var(--white-color);
 }
-.contactus-bottom{
-    
+
+.contactus-bottom {
+
+    display: inline-block;
     border-radius: 30px;
-    background-color: orange;
-    padding: 20px;
+    background-color: var(--orang-color);
+    padding: 10px 20px;
+    margin-top: 20px;
     width: fit-content;
+    color: var(--white-color);
+    border-style: solid;
+    border-color: var(--orang-color);
+    border-width: 1px;
+}
+
+.contactus-bottom:hover {
+    color: var(--orang-color);
+    border-style: solid;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+}
+
+.orange-blue-box {
+    display: block;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    text-align: center;
+    color: var(--white-color);
+    line-height: 30px;
+
+}
+
+.orange-box {
+    display: flex;
+    background-color: var(--orang-color);
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.blue-box {
+    display: flex;
+    background-color: rgb(0, 0, 41);
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.orange-box h1,
+.blue-box h1 {
+    padding: 15px 0;
+}
+
+.orang-box-icon {
+    font-size: 40px;
+
+}
+
+main {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 950px;
+    gap: 20px;
+    line-height: 25px;
+
+}
+
+.leftmain {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.leftmain div {
+    display: flex;
+
+
+}
+
+.leftmain div div span h3 {
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: var(--black-color);
+
+}
+
+.leftmain div div span {
+    color: var(--gray-color);
+}
+
+.leftmain span {
+    display: block;
+
+}
+
+.leftmain span p {
+    color: var(--gray-color);
+    padding-top: 20px;
+
+}
+
+.leftmain div div {
+    display: flex;
+    gap: 20px;
+
+}
+
+.orange-icon {
+
+    max-width: 70px;
+    max-height: 80px;
+
+}
+
+.orange-icon i {
+    border-radius: 50%;
+    background-color: var(--orang-color);
+    padding: 10px 30px;
+    font-size: 22px;
+}
+
+.rightmain {
+    width: 40%;
+    background-image: url("./image/about.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+article {
+
+    width: 100%;
+    height: 785px;
+    background: linear-gradient(rgba(143, 69, 0, 0.842), rgba(165, 66, 0, 0.74)), url("./image/bg_3.jpg") no-repeat center center / cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    color: var(--white-color);
+
+}
+
+article section {
+    display: block;
+    display: flex;
+    max-width: 1100px;
+    height: 350px;
+    margin: auto auto 0 auto;
+    gap: 30px;
+
+}
+
+.AerialPhoto {
+    width: 50%;
+    background: url("./image/about-2.jpg") no-repeat center center / cover;
+}
+
+.fox-university {
+    width: 50%;
+    text-align: left;
+
+
+
+}
+
+.fox-university h2 {
+    font-size: 40px;
+}
+
+.number {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 auto auto auto;
+}
+
+.number div h3 {
+    text-align: center;
+    font-size: 40px;
+    padding: 15px 0;
+}
+
+
+.ourcourse {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 950px;
+    padding: 112px 15px;
+    color: var(--gray-color);
+}
+
+.toptext {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.toptext h2 {
+    font-size: 44px;
+    margin: 0 0 24px;
+    color: var(--black-color);
+
+
+}
+
+.coursboxes {
+    width: 100%;
+    display: flex;
+    height: 580px;
+    gap: 15px;
+    margin-top: 50px;
+    text-align: left;
+
+}
+
+.corseimage1 {
+    width: 100%;
+    height: 300px;
+    background: url("./image/course-1.jpg") no-repeat center center / cover;
+}
+
+.corseimage2 {
+    width: 100%;
+    height: 300px;
+    background: url("./image/course-2.jpg") no-repeat center center / cover;
+}
+
+.corseimage3 {
+    width: 100%;
+    height: 300px;
+    background: url("./image/course-3.jpg") no-repeat center center / cover;
+}
+
+.corseimage4 {
+    width: 100%;
+    height: 300px;
+    background: url("./image/course-4.jpg") no-repeat center center / cover;
+}
+
+
+.firstcolumn,
+.secondcolumn,
+.thirdcolumn,
+.fourthcolumn {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.containers {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row !important;
+
+}
+
+.coursboxes div p {
+    max-width: 300px;
+
+}
+
+.applybottom2 {
+    border-radius: 30px;
+    background-color: var(--orang-color);
+    padding: 5px 20px;
+    width: max-content;
+    color: var(--white-color);
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.applybottom2:hover {
+    background-color: var(--white-color);
+    color: var(--orang-color);
+    cursor: pointer;
+    border-style: solid;
+    border-color: var(--orang-color);
+    transition: all 0.3s;
+
+}
+
+.teacher {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 950px;
+    padding: 112px 15px;
+    color: var(--gray-color);
+}
+
+.toptext {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.toptext h2 {
+    font-size: 44px;
+    margin: 0 0 24px;
+    color: var(--black-color);
+
+
+}
+
+.teacherboxes {
+    display: flex;
+    height: 580px;
+    margin-top: 50px;
+    text-align: center;
+
+}
+
+.columnone,
+.columntwo,
+.columnthree,
+.columnfour {
+    width: 25%;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.teacher1 {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    background: url("./image/teacher-1.jpg") no-repeat center center / cover;
+}
+
+.teacherboxes h2 {
+    color: var(--black-color);
+}
+
+.teacher1 span,
+.teacher2 span,
+.teacher3 span,
+.teacher4 span {
+    height: 400px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: rgb(255, 102, 0);
+    transform: translateY(25px);
+    transition: all 0.5s;
+}
+
+.teacher1 :hover,
+.teacher2 :hover,
+.teacher3 :hover,
+.teacher4 :hover {
+    transform: translateY(-10px);
+}
+
+.teacher2 {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    background: url("./image/teacher-2.jpg") no-repeat center center / cover;
+}
+
+.teacher3 {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    background: url("./image/teacher-3.jpg") no-repeat center center / cover;
+}
+
+.teacher4 {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    background: url("./image/teacher-4.jpg") no-repeat center center / cover;
+}
+
+.teacherboxes div h2 {
+    padding-top: 15px;
+}
+
+.requestform {
+    color: var(--white-color);
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(209, 104, 18, 0.384), rgba(199, 85, 19, 0.384)), url("./image/bg_5.jpg") no-repeat center center / cover;
+
+}
+
+.requestform div {
+    width: 50%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+
+    line-height: 25px;
+    gap: 20px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.requestform div h2 {
+    font-size: 35px;
+}
+
+.form {
+
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.form input {
+    display: block;
+    width: max-content;
+    display: flex;
+    background-color: transparent;
+}
+
+.formclass {
+    display: inline-block !important;
+    border: transparent !important;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2) !important;
+    height: 58px !important;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent !important;
+    color: var(--white-color) !important;
+    font-size: 16px;
+    margin-right: 1.5rem;
+    box-shadow: none !important;
+    outline: none;
+}
+
+
+
+.requestbottom {
+    display: block;
+    height: 60%;
+    width: 100%;
+    padding: 17px 35px 30px 35px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--orang-color);
+    background-color: var(--orang-color) !important;
+    border-radius: 30px;
+    cursor: pointer;
+    color: var(--white-color);
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.requestbottom :hover {
+    background-color: transparent;
+    color: var(--orang-color);
+    border-color: var(--orang-color);
+}
+
+/* recent blog section*/
+
+.recentblog {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 950px;
+    width: 100%;
+    background-color: rgb(246, 251, 252);
+    color: var(--gray-color);
+}
+
+.recentblog1 {
+    height: 730px;
+    width: 1100px;
+    padding: 5px 0;
+
+}
+
+.recentfooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recentfooter h2 {
+    font-size: 44px;
+    color: var(--black-color);
+
+}
+
+.recentfooter p {
+    margin: 24px 0 48px 0;
+    max-width: 700px;
+    text-align: center;
+}
+
+.threesection {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+
+}
+
+.threesection div {
+    display: grid;
+    gap: 26px;
+    background-color: var(--white-color);
+
+}
+
+.blue-date {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-color) !important;
+    color: var(--white-color);
+    line-height: 0.1px;
+    height: 40%;
+    font-size: 16px;
+    padding: 8px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.day {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.image-1 {
+    display: flex;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    height: 275px;
+    background: url("./image/image_1.jpg") no-repeat center center / cover;
+
+}
+
+.image-2 {
+    display: flex;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    height: 275px;
+    background: url("./image/image_2.jpg") no-repeat center center / cover;
+
+}
+
+.image-3 {
+    display: flex;
+    align-items: flex-end !important;
+    justify-content: flex-start !important;
+    width: 100%;
+    height: 275px;
+    background: url("./image/image_3.jpg") no-repeat center center / cover;
+
+}
+
+.threesection div h3 {
+    font-size: 20px;
+    color: var(--black-color);
+    padding: 0 24px;
+}
+
+.threesection div p {
+    padding: 0 24px;
+    font-size: 16px;
+}
+
+.threesection div div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 16px;
+
+}
+
+.readmorebottom {
+    display: block;
+    width: fit-content;
+    background-color: var(--orang-color) !important;
+    padding: 5px 15px;
+    color: var(--white-color);
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.readmorebottom:hover {
+    border-color: var(--orang-color);
+    background-color: var(--white-color) !important;
+    color: var(--orang-color);
+
+}
+
+.admin {
+    display: flex;
+}
+
+.studentsay {
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 750px;
+    width: 100%;
+    color: var(--gray-color);
+}
+
+.studentsay1 {
+    height: 480px;
+    width: 1100px;
+    padding: 5px 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.studentsay1 p {
+    max-width: 700px;
+}
+
+.studentsay1 h2 {
+    font-size: 44px;
+    color: var(--black-color);
+
+}
+
+
+.imagesection {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.image-4 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 30px;
+    background: url("./image/teacher-1.jpg") no-repeat center center / cover;
+
+}
+
+.paragraaf {
+    display: block;
+    max-width: 500px;
+
+}
+
+.paragraaf :first-child {
+    margin-bottom: 30px;
+}
+
+.imagesection p {
+    text-align: left;
+
+}
+
+.henry-dee {
+    color: var(--black-color);
+    font-weight: 700;
+}
+
+.upfooterimages {
+    display: block;
+    display: flex;
+    width: 100%;
+    height: 300px;
+
+}
+
+.upfooterimages a {
+
+    width: 25%;
+    height: 300px;
+    display: block;
+}
+
+.image-5 {
+    width: 25%;
+    height: 300px;
+    background: url("./image/course-1.jpg") no-repeat center center / cover;
+    position: absolute;
+
+}
+
+.image-6 {
+    width: 25%;
+    height: 300px;
+    background: url("./image/image_2.jpg") no-repeat center center / cover;
+    position: absolute;
+    left: 25%;
+}
+
+.image-7 {
+    width: 25%;
+    height: 300px;
+    background: url("./image/image_3.jpg") no-repeat center center / cover;
+    position: absolute;
+    left: 50%;
+}
+
+.image-8 {
+    width: 25%;
+    height: 300px;
+    background: url("./image/bg_3.jpg") no-repeat center center / cover;
+    position: absolute;
+    left: 75%;
+}
+
+.instagram {
+    width: 50px;
+    height: 50px;
+    background-color: var(--orang-color);
+    position: relative;
+    top: 40%;
+    left: 45%;
+    bottom: 45%;
+    right: 45%;
+    visibility: hidden;
+
+}
+
+.insta-size {
+    font-size: 20px;
+}
+
+.zoom-cursor {
+    cursor: zoom-in;
+}
+
+.image-hover :hover+.instagram {
+    visibility: visible;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    background-color: #232323;
+    color: var(--white-color);
+
+}
+
+.footerbox {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: auto;
+    max-width: 1100px;
+    height: 540px;
+    line-height: 1.5;
+    color: var(--white-color);
+}
+
+
+.column1 h2,
+.column2 h2 {
+    font-size: 22px;
+    margin-bottom: 40px;
+
+}
+
+.addresses {
+    font-size: 14px;
+    display: inline-block;
+    max-width: 200px;
+}
+
+
+.column1 ul li {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    max-width: 250px;
+}
+
+.margin1 {
+    margin-right: 10px;
+}
+
+.gridfooter {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin-bottom: 20px;
+
+}
+
+.gridfooter2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.littleimage1 {
+    background: url("./image/image_1.jpg") no-repeat center center / cover;
+    width: 78px;
+    height: 80px;
+}
+
+.gridfooter :last-child,
+.gridfooter2 :last-child {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color:var(--gray-color);
+}
+
+.paragraf {
+    display: block;
+    font-size: 16px;
+    max-width: 130px;
+}
+
+.hovers :hover {
+
+    color: var(--orang-color);
+
+}
+
+
+.flex {
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.gridfooter :last-child div,
+.gridfooter2 :last-child div {
+    flex-direction: row;
+    gap: 10px;
+    color: var(--gray-color);
+}
+
+.form-group input {
+    display: block;
+    font-size: 16px;
+
+}
+
+.subscribebottom {
+
+    display: block;
+    width: 100%;
+    height: 55px;
+    background-color: #5d50c6;
+    border-radius: 3px;
+    border-style: none;
+    color: var(--white-color);
+    cursor: pointer;
+    margin-top: 8px;
+
+}
+
+.subscribebottom :hover {
+    background-color: var(--orang-color) !important;
+}
+
+.addressinput {
+    width: 100%;
+    height: 55px;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: #ffffff1a;
+    border-style: none;
+    border-radius: 3px;
+    color: var(--white-color);
+
+}
+
+.column3 {
+    font-size: 14px;
+}
+
+.column4,
+.column3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.padding {
+    padding-right: 7px;
+}
+
+.column3 ul li :last-child {
+    color: var(--gray-color);
+}
+
+.vitual-icon {
+    width: 211px;
+    height: 52px;
+    display: inline-block;
+
+}
+
+.margin {
+    margin-top: 7px;
+    font-size: 25px;
+}
+
+.border-style {
+    margin-left: 10px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff1a;
+}
+
+.copyrighting {
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 150px;
+    padding-bottom: 20px;
+
+}
+
+
+@media (max-width:480px) {
+    header {
+        max-width: 480px;
+        height: 110px;
     }
+
+    .topheader .flex {
+        gap: 5px;
+    }
+
+    .topheader .flex span h6,
+    .topheader .flex span p {
+        font-size: 10px;
+        font-weight: 145;
+    }
+
+    .applybottom {
+        margin: 0 5px;
+        padding: 5px 2px;
+        font-size: small;
+        text-align: center;
+    }
+
+    .downheader ul {
+        gap: 18px;
+        font-size: 10px;
+    }
+
+    .downheader div {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .form-search {
+        font-size: 10px;
+        padding: 2px 1px 2px 3px;
+    }
+
+    nav {
+        width: 480px;
+        height: 50vh;
+
+    }
+
+    .underheaderimage {
+        height: 50vh;
+        gap: 10px;
+        margin-left: 10px;
+
+    }
+
+    .underheaderimage h1 {
+        font-size: 15px !important;
+        max-width: 200px;
+        color: var(--white-color);
+    }
+
+    .underheaderimage p {
+        font-size: 10px !important;
+        max-width: 200px;
+        color: var(--white-color);
+    }
+
+    .contactus-bottom {
+        padding: 5px 2px;
+        font-size: 11px;
+        margin-top: 10px;
+
+    }
+
+    .orange-blue-box {
+        width: 480px;
+        height: 100px;
+        font-size: 8px;
+        line-height: 15px;
+
+    }
+
+    .orange-box,
+    .blue-box {
+        padding: 0 2px;
+
+    }
+
+    .orang-box-icon {
+        font-size: 12px;
+
+    }
+
+    .orange-box h1,
+    .blue-box h1 {
+        padding: 5px 0;
+        font-size: 10px;
+    }
+
+    main {
+        width: 480px;
+        line-height: 15px;
+        font-size: 10px;
+        gap: 5px;
+        height: 580px;
+    }
+
+    .rightmain {
+        display: none;
+    }
+
+    .leftmain {
+
+        width: 100%;
+        padding: 16px 8px 16px 5px;
+    }
+
+    .leftmain span p {
+        margin: 0 0 8px;
+
+    }
+
+    .leftmain span {
+        text-align: center;
+    }
+
+    .leftmain div {
+        padding: 0 5px;
+        margin: 0 0 10px 0;
+    }
+
+    .leftmain span h1 {
+        font-size: 12px;
+        margin: 0 0 8px;
+    }
+
+    .leftmain div div span h3 {
+        padding-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .leftmain div {
+        display: flex;
+        padding: 0 5px;
+        margin: 2px;
+    }
+
+    .orange-icon {
+
+        font-size: 10px;
+    }
+
+    .orange-icon i {
+        font-size: 20px;
+        width: 50%;
+        height: 70%;
+    }
+
+    article {
+        width: 480px;
+        height: 320px;
+    }
+
+    article section {
+        gap: 2px;
+        padding: 10px 10px;
+    }
+
+    .fox-university {
+        padding-left: 10px;
+        font-size: 10px;
+    }
+
+    .fox-university h2 {
+        font-size: 15px;
+
+    }
+
+    .number {
+        height: 100px;
+    }
+
+    .number div h3 {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .number div p {
+        font-size: 10px;
+        padding: 0;
+    }
+
+    .ourcourse {
+        width: 480px;
+        height: 730px;
+        padding: 10px 5px;
+    }
+
+    .coursboxes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 500px;
+        margin-top: 2px;
+        gap: 5px;
+    }
+
+    .toptext p {
+        max-width: 450px;
+        font-size: 10px;
+    }
+
+    .toptext h2 {
+        font-size: 15px;
+        margin: 0 0 4px 0;
+        color: var(--black-color);
+    }
+
+    .firstcolumn,
+    .secondcolumn,
+    .thirdcolumn,
+    .fourthcolumn {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .containers div {
+        font-size: 10px;
+
+    }
+
+    .firstcolumn a h2,
+    .secondcolumn a h2,
+    .thirdcolumn a h2,
+    .fourthcolumn a h2 {
+        font-size: 12px;
+    }
+
+    .corseimage1,
+    .corseimage2,
+    .corseimage3,
+    .corseimage4 {
+        height: 150px;
+    }
+
+    .teacher {
+
+        width: 480px;
+        padding: 10px;
+        height: 580px;
+    }
+
+
+
+    .teacherboxes {
+        margin-top: 10px;
+        height: 200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .columnone,
+    .columntwo,
+    .columnthree,
+    .columnfour {
+        width: 100%;
+        padding: 0 5px;
+        gap: 5px;
+    }
+
+    .columnone h2,
+    .columntwo h2,
+    .columnthree h2,
+    .columnfour h2 {
+        font-size: 12px;
+    }
+
+    .columnone p,
+    .columntwo p,
+    .columnthree p,
+    .columnfour p {
+        font-size: 10px;
+    }
+
+    .columnone,
+    .columntwo {
+        margin-bottom: 8px;
+    }
+
+    .teacher1,
+    .teacher2,
+    .teacher3,
+    .teacher4 {
+        height: 150px;
+        background-position: top;
+    }
+
+    .teacher1 span,
+    .teacher2 span,
+    .teacher3 span,
+    .teacher4 span {
+        height: 20px;
+        font-size: 5px;
+        transform: translateY(-20px);
+    }
+
+
+    .teacher1 :hover,
+    .teacher2 :hover,
+    .teacher3 :hover,
+    .teacher4 :hover {
+        transform: translateY(5px);
+    }
+
+
+    .teacherboxes div h2 {
+        padding-top: 5px;
+    }
+
+    .teacherboxes div h2 {
+        padding-top: 5px;
+    }
+
+    .requestform {
+        width: 480px;
+        height: 50vh;
+
+    }
+
+    .requestform div {
+        height: 200px;
+        margin-right: 2px;
+        gap: 5px;
+    }
+
+    .requestform div h2 {
+        font-size: 12px;
+    }
+
+    .requestform div p {
+        font-size: 10px;
+    }
+
+    .form input {
+        width: 95px;
+
+    }
+
+    .form input::placeholder,
+    .form option::placeholder,
+    .form textarea::placeholder {
+        font-size: 9px !important;
+    }
+
+    .formclass {
+        margin-right: 2px;
+        font-size: 10px;
+        height: 20px !important;
+    }
+
+    .requestbottom {
+        font-size: 10px;
+        padding: 1px 5px 2px 5px;
+    }
+
+    .recentblog {
+        width: 480px;
+        height: 1300px;
+    }
+
+    .recentblog1 {
+        height: 1200px;
+        width: 480px;
+        padding: 2px 0;
+
+    }
+
+    .recentfooter h2 {
+        font-size: 15px;
+
+    }
+
+    .recentfooter p {
+        font-size: 10px;
+        margin: 5px;
+        max-width: 700px;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .threesection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 6px;
+        text-align: left;
+
+    }
+
+    .blue-date {
+        font-size: 10px !important;
+        line-height: 0.01px;
+    }
+
+    .day {
+        font-size: 15px !important;
+        font-weight: 200px !important;
+    }
+
+    .threesection div {
+        gap: 15px;
+    }
+
+    .threesection div h3 {
+        font-size: 12px;
+        padding: 0 24px;
+    }
+
+    .threesection div p {
+        font-size: 10px;
+
+    }
+
+    .readmorebottom {
+        font-size: 12px !important;
+        padding: 1px 5px;
+    }
+
+    .threesection div div div {
+        font-size: 12px;
+    }
+
+    .studentsay {
+        width: 480px;
+        height: 280px;
+    }
+
+    .studentsay1 {
+        height: 250px;
+        gap: 10px;
+    }
+
+    .studentsay1 h2 {
+        font-size: 12px;
+
+    }
+
+    .studentsay1 p {
+        max-width: 400px;
+        font-size: 10px;
+    }
+
+    .paragraaf {
+        max-width: 200px;
+
+    }
+
+    .paragraaf :first-child {
+        margin-bottom: 10px;
+    }
+
+    .upfooterimages {
+        height: 1200px;
+        width: 480px;
+        flex-direction: column;
+
+    }
+
+    .upfooterimages a {
+        width: 480px;
+
+    }
+
+    .image-7,
+    .image-8,
+    .image-5,
+    .image-6 {
+        width: 100%;
+        display: flex;
+        position: static;
+    }
+
+    footer {
+        width: 480px;
+        height: 280px;
+    }
+
+    .footerbox {
+        max-width: 480px;
+        padding-top: 10px;
+        line-height: 1;
+        gap: 15px;
+        margin-left: 8px;
+    }
+
+    .column1 h2,
+    .column2 h2 {
+        font-size: 12px;
+        margin-bottom: 20px;
+
+    }
+
+    .addresses {
+        font-size: 10px;
+        max-width: 90px;
+    }
+
+    .column3 {
+        width: 50px;
+    }
+
+    .column1 ul li {
+        font-size: 10px;
+        margin-bottom: 1rem;
+        max-width: 100px;
+    }
+
+    .column1 ul li span {
+        font-size: 10px;
+        margin-bottom: 1rem;
+        max-width: 100px;
+    }
+
+    .littleimage1 {
+        width: 48px;
+        height: 50px;
+    }
+
+    .gridfooter :last-child,
+    .gridfooter2 :last-child {
+        font-size: 10px;
+        gap: 5px;
+    }
+
+    .paragraf {
+        font-size: 10px;
+        max-width: 80px;
+    }
+
+    .column3,
+    .column4 {
+        font-size: 10px;
+        gap: 10px;
+        overflow: hidden;
+    }
+
+    .addressinput {
+        width: 90px;
+        height: 10px;
+        padding: 12px 0;
+    }
+
+    .subscribebottom {
+        height: 20px;
+        width: 90px;
+        padding: 1px 7px;
+        font-size: 10px !important;
+    }
+
+    .vitual-icon {
+        width: 100px;
+    }
+
+    .border-style {
+        width: 28px;
+        height: 28px;
+
+    }
+
+    .form-group input::placeholder {
+        font-size: 10px !important;
+    }
+
+    .subscribebottom::placeholder {
+        font-size: 10px !important;
+    }
+
+    .column4 h2 {
+        font-size: 12px;
+    }
+
+    .margin {
+        margin-top: 12px;
+        font-size: 15px;
+    }
+
+    .padding {
+        padding-right: 1px;
+    }
+
+    .border-style {
+        margin-left: 2px;
+    }
+
+    .copyrighting {
+        font-size: 10px;
+        margin-top: 30px;
+    }
+}
+
+/*     tablet responsivation */
+
+@media (min-width:481px) and (max-width:760px) {
+    .downheader ul {
+        gap: 10px;
+    }
+
+    .form-search {
+        width: 90px;
+        padding: 7px 0px 7px 1px;
+    }
+
+    .underheaderimage h1 {
+        font-size: 30px;
+    }
+
+    .underheaderimage p {
+        font-size: 15px;
+    }
+
+    .underheaderimage {
+        margin-left: 10px;
+    }
+
+    .orange-blue-box {
+        font-size: small;
+        line-height: 1.5;
+    }
+
+
+    .leftmain {
+        font-size: small;
+        gap: 5px;
+
+    }
+
+    .leftmain span {
+        padding-left: 10px;
+    }
+
+    .orange-icon i {
+        display: none;
+    }
+
+    .fox-university h2 {
+        font-size: 22px;
+    }
+
+    .fox-university p {
+        font-size: 12px;
+    }
+
+    .AerialPhoto {
+        margin-left: 10px;
+    }
+
+    .number div h3 {
+        font-size: 20px;
+    }
+
+    .firstcolumn a h2,
+    .secondcolumn a h2,
+    .thirdcolumn a h2,
+    .fourthcolumn a h2 {
+        font-size: 11.5px;
+    }
+
+    .coursboxes div p {
+        font-size: 10px;
+
+    }
+
+    .toptext h2 {
+        font-size: 20px;
+    }
+
+    .toptext p {
+        font-size: 10px;
+    }
+
+    .littlefont {
+        font-size: 6px;
+    }
+
+    .ourcourse {
+        height: 550px;
+    }
+
+    .corseimage1,
+    .corseimage2,
+    .corseimage3,
+    .corseimage4 {
+        height: 100px;
+    }
+
+    .applybottom2 {
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+
+    .teacher {
+        height: 650px;
+    }
+
+    .columnone h2,
+    .columntwo h2,
+    .columnthree h2,
+    .columnfour h2 {
+        font-size: small;
+    }
+
+    .columnone,
+    .columntwo,
+    .columnthree,
+    .columnfour {
+        font-size: 10px;
+    }
+
+    .teacher1,
+    .teacher2,
+    .teacher3,
+    .teacher4 {
+        height: 200px;
+    }
+
+    .requestform div {
+        margin-right: 5px;
+        gap: 5px;
+
+
+    }
+
+    .requestform div h2 {
+        font-size: 15px;
+    }
+
+    .requestform div p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .formclass {
+        font-size: 10px;
+        height: 1px;
+
+    }
+
+    .recentblog1 {
+        height: 950px;
+    }
+
+    .requestbottom {
+        height: 30%;
+        font-size: 10px;
+        padding: 2px 5px;
+    }
+
+
+    .recentfooter h2 {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .recentfooter p {
+        font-size: 12px;
+        max-width: 400px;
+        margin: 10px 0 12px 0;
+    }
+
+    .threesection {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 6px;
+        text-align: left;
+
+    }
+
+    .image-1,
+    .image-2,
+    .image-3 {
+        height: 230px;
+
+    }
+
+    .image-2 {
+        background-position: top;
+    }
+
+
+    .blue-date {
+        font-size: 10px !important;
+        line-height: 0.01px;
+    }
+
+    .day {
+        font-size: 15px !important;
+        font-weight: 200px !important;
+    }
+
+    .threesection div {
+        gap: 15px;
+    }
+
+    .threesection div h3 {
+        font-size: 12px;
+        padding: 0 24px;
+    }
+
+    .threesection div p {
+        font-size: 10px;
+
+    }
+
+    .readmorebottom {
+        font-size: 12px !important;
+        padding: 1px 5px;
+    }
+
+    .threesection div div div {
+        font-size: 12px;
+    }
+
+    .studentsay1 h2 {
+        font-size: 15px;
+        padding-top: 150px;
+    }
+
+    .studentsay1 p {
+        font-size: 10px;
+        max-width: 300px;
+    }
+
+
+    .upfooterimages {
+        height: 1000px;
+        flex-direction: column;
+
+    }
+
+    .upfooterimages a {
+
+        width: 100%;
+        height: 250px;
+    }
+
+    .image-7,
+    .image-8,
+    .image-5,
+    .image-6 {
+        width: 100%;
+        display: flex;
+        position: static;
+    }
+
+    .column1 h2,
+    .column2 h2,
+    .column3 h2,
+    .column4 h2 {
+        font-size: 15px;
+    }
+
+    .column1 ul li,
+    .column2 ul li,
+    .column3 ul li,
+    .column4 ul li {
+        font-size: 10px;
+    }
+
+    .paragraf,
+    .paragraf a {
+        font-size: 10px;
+    }
+
+    .addressinput,
+    .subscribebottom {
+        width: 150px;
+    }
+
+    .littleimage1 {
+        width: 40px;
+        height: 40px;
+    }
+
+}
