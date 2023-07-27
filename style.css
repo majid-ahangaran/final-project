@@ -581,6 +581,13 @@ article section {
 .teacher4 :hover {
     transform: translateY(-10px);
 }
+.teacher1:hover,
+.teacher2:hover,
+.teacher3:hover,
+.teacher4:hover {
+    transform: scale(104%);
+    transition: all 0.4s;
+}
 
 .teacher2 {
     overflow: hidden;
