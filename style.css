@@ -36,6 +36,8 @@
     color: white;
 }
 
+/* popular class */
+
 a {
     color: white;
     display: inline-block;
@@ -173,6 +175,8 @@ header {
     transform: translate(-30px, 2px);
 }
 
+/* under-header section
+ */
 nav {
     width: 100%;
     height: 100vh;
@@ -223,6 +227,8 @@ nav {
     background-color: rgba(255, 255, 255, 0);
     transition: all 0.3s ease;
 }
+/* 
+<!--     orange-blue-4box--> */
 
 .orange-blue-box {
     display: block;
@@ -261,6 +267,8 @@ nav {
 
 }
 
+/* <!--  large main WHAT WE OFFER-->
+ */
 main {
     display: flex;
     margin: 0 auto;
@@ -336,6 +344,8 @@ main {
 
 }
 
+/* <!-- Fox UNiversiti section --> */
+
 article {
 
     width: 100%;
@@ -390,7 +400,8 @@ article section {
     padding: 15px 0;
 }
 
-
+/* <!--     Our Courses section-->
+ */
 .ourcourse {
     display: block;
     display: flex;
@@ -493,6 +504,9 @@ article section {
 
 }
 
+/* <!--     Certified Theachers-->
+ */
+
 .teacher {
     display: block;
     display: flex;
@@ -593,6 +607,8 @@ article section {
     padding-top: 15px;
 }
 
+/* <!-- request form-->
+ */
 .requestform {
     color: var(--white-color);
     display: block;
@@ -817,6 +833,8 @@ article section {
     display: flex;
 }
 
+/* <!--     Student Says About Us section -->
+ */
 .studentsay {
     display: block;
     display: flex;
@@ -886,6 +904,8 @@ article section {
     font-weight: 700;
 }
 
+/* <!--     upfooter images row-->
+ */
 .upfooterimages {
     display: block;
     display: flex;
@@ -958,7 +978,8 @@ article section {
     visibility: visible;
 
 }
-
+/* <!-- Fooooooter -->
+ */
 footer {
     display: flex;
     flex-direction: column;
@@ -1159,7 +1180,8 @@ footer {
 
 }
 
-
+/* media responsive
+ */
 @media (max-width:480px) {
     header {
         max-width: 480px;
